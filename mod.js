@@ -104,4 +104,8 @@ function adjustReadings(readings){
     readings.readingB += readings.coreTemp/2;
 }
 
+log("Reading before: ");
+log(readings);
+adjustReadings(readings);
+log("Reading after: ");
 log(readings)
