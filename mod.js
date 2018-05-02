@@ -1,5 +1,9 @@
 // "use strict"
 
+   function log(msg) {
+       console.log(msg);
+   }
+
     function Person(firstName, lastName, age) {
           this.firstName = firstName;
           this.lastName = lastName;
@@ -59,7 +63,7 @@ class Dog1 extends Pet1 {
 let max2 = new Dog1("max2", "Another type");
 max2.play();
 max2.eat();
-console.log(max2);
+log(max2);
 
 class Profile {
     
@@ -84,5 +88,20 @@ let user = {
 
 let man = new Profile(user);
 let profileUrl = man.createProfileUrl("http://ardeshir.org", man.createUsername(user));
-console.log(profileUrl);
-console.log(man);
+log(profileUrl);
+log(man);
+
+let readings = {
+    coreTemp: 74,
+    additionalTemp: 80,
+    readingA: 178,
+    readingB: 120,
+    readingC: - 190
+}
+
+function adjustReadings(readings){
+    readings.readingA -= 20;
+    readings.readingB += readings.coreTemp/2;
+}
+
+log(readings)
