@@ -22,6 +22,12 @@
         "semi": [
             "error",
             "always"
+        ],
+        "no-console": [
+            "warn"
+        ],
+        "no-var": [
+            "error"
         ]
     }
 }
