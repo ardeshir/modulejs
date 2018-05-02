@@ -1,3 +1,4 @@
+// "use strict"
 
     function Person(firstName, lastName, age) {
           this.firstName = firstName;
