@@ -52,11 +52,37 @@ class Dog1 extends Pet1 {
       }
       
       play() {
-          console.log(`${this.name} is playing ...`)
+          console.log(`${this.name} is playing ...`);
       }
 }
 
 let max2 = new Dog1("max2", "Another type");
 max2.play();
 max2.eat();
-console.log(max2)
+console.log(max2);
+
+class Profile {
+    
+    constructor(user) {
+        this.user = user;
+    }
+    
+    createUsername(user) {
+        return `${user.firstName}.${user.lastName}`;
+    }
+    
+    createProfileUrl(domain, username) {
+        return `${domain}/${username}`;
+    }
+}
+
+let user = {
+    id: 123, 
+    firstName: 'ardeshir', 
+    lastName: 'org'
+};
+
+let man = new Profile(user);
+let profileUrl = man.createProfileUrl("http://ardeshir.org", man.createUsername(user));
+console.log(profileUrl);
+console.log(man);
