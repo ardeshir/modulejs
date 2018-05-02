@@ -1,12 +1,33 @@
+/*******************************************************
+ *  YOU MUST USE THE LATEST node 
+ * root@ardeshir ~/javascript (master) $ nvm use v9.4.0
+   Now using node v9.4.0 (npm v5.6.0)
+   root@ardeshir ~/javascript (master) $ node -v
+   v9.4.0
+   root@ardeshir ~/javascript (master) $ npm start
 
+> javascript@1.0.0 start /root/javascript
+> node app.js
+
+Ardeshir Sepahsalar - 47
+Hello, I am Ardeshir
+********************************************************/
+
+const Person = require('./person');
+const { greet, printP } = require('./utils');
+
+let p = new Person("Ardeshir", "Sepahsalar", 47)
+
+printP(p);
+greet(p);
+
+
+/********************************************************
 var axios = require("axios");
 
 axios.get("https://jsonplaceholder.typicode.com/posts").then((response) => {
       console.log("First post: ", response.data[0]) 
 });
-
-
-/******************
 
 // live-server .  --port=9000 --host=0.0.0.0
 
