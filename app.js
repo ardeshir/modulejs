@@ -1,4 +1,15 @@
-// "use strict"
+
+var axios = require("axios");
+
+axios.get("https://jsonplaceholder.typicode.com/posts").then((response) => {
+      console.log("First post: ", response.data[0]) 
+});
+
+
+/******************
+
+// live-server .  --port=9000 --host=0.0.0.0
+
 
    function log(msg) {
        console.log(msg);
@@ -123,3 +134,5 @@ log(readings);
 
 log("New Readings: ");
 log(newreadings);
+
+****************** */
