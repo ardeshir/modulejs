@@ -57,3 +57,14 @@ console.log("Todos before: \n", todos);
 // makePending(todos);
 let newtod = identify(todos);
 console.log("Todos : \n", newtod);
+
+
+let numbers = [
+	1,2,3,4,5,6,7,8,9,10
+	];
+	
+function getEven(numbers) {
+	return numbers.filter( (num) => num % 2 == 0 );
+}
+
+console.log(getEven(numbers))
