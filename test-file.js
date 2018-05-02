@@ -6,11 +6,11 @@ let todos = [
     }, { 
         id: 2,
         task: "Push me",
-        completed: false
+        completed: true
     }, {
         id: 3,
         task: "Go home",
-        completed: false }
+        completed: true }
 ];
 
 // console.log("All the todos");
@@ -23,4 +23,18 @@ for( let todo of todos) {
     }
 }
 
+function makePending(todos){
+	// for(let i=0; i<todos.length; i++) {
+	// 	todos[i].completed = false;
+	// }
+	
+	todos.forEach((todo, index) => {
+	    todo.completed = false;	
+	});
+}
 // console.log(completed)
+
+console.log(todos);
+makePending(todos);
+console.log(todos);
+

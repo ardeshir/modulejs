@@ -102,6 +102,8 @@ let readings = {
 function adjustReadings(readings){
     readings.readingA -= 20;
     readings.readingB += readings.coreTemp/2;
+
+    return readings;
 }
 
 
@@ -113,8 +115,11 @@ log("Reading before: ");
 log(readings);
 
 // adjustReadings(readings);
-adjustReadings({...readings})
-log(testReadingA(readings.readingA));
+let newreadings = adjustReadings({...readings})
+// log(testReadingA(readings.readingA));
 
 log("Reading after: ");
 log(readings);
+
+log("New Readings: ");
+log(newreadings);
