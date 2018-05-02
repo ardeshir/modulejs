@@ -17,6 +17,7 @@ let todos = [
 // console.log(todos);
 
 let completed = [];
+
 for( let todo of todos) {
     if (todo.completed) {
         completed.push(todo);
@@ -34,7 +35,25 @@ function makePending(todos){
 }
 // console.log(completed)
 
-console.log(todos);
-makePending(todos);
-console.log(todos);
 
+
+function identify(todos){
+	// for(let i = 0; i < todos.length; i++) {
+	// 	todos[i].id = i+2;
+	// }
+	
+	return todos.map((todo, index) => {
+		
+		return {
+			...todo,
+			id: index + 3
+		}
+		
+	});
+	// console.log("Todos inside: ", todos);
+}
+
+console.log("Todos before: \n", todos);
+// makePending(todos);
+let newtod = identify(todos);
+console.log("Todos : \n", newtod);
