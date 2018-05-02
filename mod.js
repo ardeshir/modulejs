@@ -104,8 +104,17 @@ function adjustReadings(readings){
     readings.readingB += readings.coreTemp/2;
 }
 
+
+function testReadingA(readingA) {
+    return readingA >= 170;
+}
+
 log("Reading before: ");
 log(readings);
-adjustReadings(readings);
+
+// adjustReadings(readings);
+adjustReadings({...readings})
+log(testReadingA(readings.readingA));
+
 log("Reading after: ");
-log(readings)
+log(readings);
