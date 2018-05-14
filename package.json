@@ -4,8 +4,8 @@
   "description": "Teaching JS ES6 Modules",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "start2": "live-server .  --port=9000 --host=0.0.0.0 &",
+    "start_": "node app.js",
+    "start": "live-server .  --port=9000 --host=0.0.0.0 &",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +22,7 @@
   "devDependencies": {
     "axios": "^0.18.0",
     "eslint": "^4.19.1",
+    "live-server": "^1.2.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.6.0"
   }
