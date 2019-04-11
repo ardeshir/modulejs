@@ -2,10 +2,13 @@
   "name": "javascript",
   "version": "1.0.0",
   "description": "Teaching JS ES6 Modules",
-  "main": "app.js",
+  "main": "src/index.js",
   "scripts": {
+    "build-web": "browserify src/index.js -o dist/index.js -t [browserify --presets [ env ] ]",
+    "build-cli": "browserify src/index.js --node -o dist/index.js -t [ babelify --presets [ env ] ]",
+    "start": "yarn build-cli && node dist/index.js",
     "start_": "node app.js",
-    "start": "live-server .  --port=9000 --host=0.0.0.0 &",
+    "start__": "live-server .  --port=9000 --host=0.0.0.0 &",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,9 +24,16 @@
   "homepage": "https://github.com/ardeshir/modulejs#readme",
   "devDependencies": {
     "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
     "eslint": "^5.16.0",
     "live-server": "^1.2.1",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.6.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3"
   }
 }
