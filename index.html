@@ -68,9 +68,10 @@
 
     <div class="body-content">
 <!-- start new -->  
-   <pre>
-/*******************************************************
- *  YOU MUST USE THE LATEST node 
+ <pre id="body-text">
+/****************************************
+
+ * YOU MUST USE THE LATEST node 
  * root@ardeshir ~/javascript (master) $ nvm use v9.4.0
    Now using node v9.4.0 (npm v5.6.0)
    root@ardeshir ~/javascript (master) $ node -v
@@ -78,7 +79,8 @@
    root@ardeshir ~/javascript (master) $ npm start
    
  * Open developer tools and view console output
-********************************************************/
+ 
+***********    app.js      **************/
 
 import { Person } from './person';
 import { checkID, greet, printP } from './utils';
@@ -171,17 +173,12 @@ export class PostManager {
 export const POSTS_ENDPOINT = "https://jsonplaceholder.typicode.com/posts"; 
 
 
+</pre> 
+    
 
-   </pre> 
-    
-    
-    
-    
-    
-    
-    
 
             <script src="dist/bundle.js"></script>
+            
             <!-- script src="module-pattern.js"></script -->
             <!-- script src="app.js"></script -->
 

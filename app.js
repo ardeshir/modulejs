@@ -10,8 +10,8 @@
 
 import { Person } from './person';
 import { checkID, greet, printP } from './utils';
-import { HttpClient }  from './http-client';
-import { PostManager } from  './post-manager';
+import { HttpClient } from './http-client';
+import { PostManager } from './post-manager';
 
 let p = new Person("Ardeshir", "Sepahsalar", 47);
 
